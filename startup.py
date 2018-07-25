@@ -12,7 +12,8 @@ call("(sudo apt-get install ansible)", shell=True)
 # call("sudo apt-get install git")
 call("(sudo git clone https://github.com/scottmotte/ansible-pi.git /home/pi/ansible-pi)", shell=True)
 
-call("(cd ~/ansible-pi)", shell=True)
+wd = os.getcwd()
+os.chdir("/home/pi/ansible-pi")
 call("(cp hosts.example hosts)", shell=True)
 # call("cp wpa_supplicant.conf.example wpa_supplicant.conf")
 

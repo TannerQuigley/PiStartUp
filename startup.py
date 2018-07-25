@@ -12,7 +12,7 @@ call("(sudo apt-get install ansible)", shell=True)
 # call("sudo apt-get install git")
 call("(git clone https://github.com/scottmotte/ansible-pi.git)", shell=True)
 
-call("(cd ansible-pi)", shell=True)
+call("(cd ~/ansible-pi)", shell=True)
 call("(cp hosts.example hosts)", shell=True)
 # call("cp wpa_supplicant.conf.example wpa_supplicant.conf")
 

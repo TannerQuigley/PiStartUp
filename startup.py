@@ -10,8 +10,7 @@ call("(sudo apt-get install ansible)", shell=True)
 
 # git stuff
 # call("sudo apt-get install git")
-call("(cd ~/)", shell=True)
-call("(git clone https://github.com/scottmotte/ansible-pi.git)", shell=True)
+call("(sudo git clone https://github.com/scottmotte/ansible-pi.git /home/pi/ansible-pi)", shell=True)
 
 call("(cd ~/ansible-pi)", shell=True)
 call("(cp hosts.example hosts)", shell=True)

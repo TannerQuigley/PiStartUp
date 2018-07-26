@@ -18,12 +18,13 @@ os.chdir("/home/pi/ansible-pi")
 # call("(cp hosts.example hosts)", shell=True)
 
 # Write Hosts file
+# call("(sudo chmod 777 /home/pi/ansible-pi/)")
 file = open("hosts", "w+")
-file.write("[webserver]")
+file.write("[webserver]\n")
 file.write("192.168.27.64")
 file.close()
 
 # call("sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.example wpa_supplicant.conf")
-copyfile("/etc/wpa_supplicant/wpa_supplicant.conf.example", "wpa_supplicant.conf")
+copyfile("/etc/wpa_supplicant/wpa_supplicant.conf", "/home/pi/ansible-pi/wpa_supplicant.conf")
 
 call("(ansible-playbook playbook.yml -i hosts --ask-pass --sudo -c paramiko)", shell=True)
